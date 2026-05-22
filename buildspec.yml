@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  deploy:
+    commands:
+      - echo Deploying to S3...
+      - aws s3 sync . s3://$S3_BUCKET --delete --exclude "buildspec.yml"
+
+artifacts:
+  files:
+    - '**/*'
