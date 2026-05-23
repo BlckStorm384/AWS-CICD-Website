@@ -1,14 +1,19 @@
-# AWS CI/CD Static Website
+# AWS CI/CD Static Website Pipeline
 
-🌐 **Live Website:** https://d1icdf6dh9n0y6.cloudfront.net
+## 🔴 Note: AWS services currently paused to manage costs
+
+## 📸 Demo
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/575a0d8f-fc2a-4eb3-8ee1-e68a396929f7" />
+
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/4267f4cd-c940-41b1-b197-69c7755b76ef" />
+
+
+## 🌐 Live URL (when active)
+https://d1icdf6dh9n0y6.cloudfront.net
 
 ## Tech Stack
-- AWS S3 — Static website hosting
-- AWS CloudFront — CDN & HTTPS
-- AWS CodePipeline — Automated deployment
-- AWS CodeBuild — Build & deploy automation
-- GitHub — Source control
+- AWS S3, CloudFront, CodePipeline, CodeBuild, IAM, CloudWatch
+- GitHub for source control
 
-## How It Works
-Every push to the `main` branch automatically triggers
-CodePipeline which builds and deploys to S3 via CloudFront.
+## Architecture
+GitHub Push → CodePipeline → CodeBuild → S3 → CloudFront → Live Website
